@@ -17,9 +17,9 @@ namespace Clase3.Logica
     {
         private static List<Seleccion> Selecciones { get; set; } = new List<Seleccion>() 
         {
-            new Seleccion() { Pais = "Argentina", Clasificada = true, Continente = "America"},
-            new Seleccion() { Pais = "Brasil", Clasificada = true, Continente = "America"},
-            new Seleccion() { Pais = "Italia", Clasificada = false, Continente = "Europa"},
+            new Seleccion() { Pais = "Argentina", Clasificada = true, Continente = "America", Confederacion="AFA"},
+            new Seleccion() { Pais = "Brasil", Clasificada = true, Continente = "America", Confederacion = "CBF"},
+            new Seleccion() { Pais = "Italia", Clasificada = false, Continente = "Europa", Confederacion="FIGC"},
         };
 
         public List<Seleccion> ObtenerTodas()
