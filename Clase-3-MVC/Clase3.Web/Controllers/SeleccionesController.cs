@@ -23,17 +23,17 @@ namespace Clase3.Web.Controllers
             return View(todasSelecciones);
         }
 
-        public IActionResult TodasOrdenadas()
-        {
-            List<Seleccion> todasSelecciones = _seleccionService.ObtenerTodas();
-            List<Seleccion> ordenadas = todasSelecciones.OrderBy(x => x.Pais).ToList();
-            return View("Todas", ordenadas);
-        }
-
         [HttpGet]
         public IActionResult Agregar()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Ordenadas()
+        {
+            List<Seleccion> todasSelecciones = _seleccionService.ObtenerOrdenadasAlfabeticamenteClasificadas();
+            return View(todasSelecciones);
         }
 
         [HttpPost]
